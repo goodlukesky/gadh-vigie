@@ -1,11 +1,14 @@
-<header>
-  <h1>Vigie Gestion Adhérent</h1>
-  <p>Copy json response of https://padoa-group.zendesk.com/api/v2/views/xxxx/execute.json below (execute.json in network)</p>
+<header class="header">
+  <h1 class="title">
+    Vigie Gestion Adhérent
+    <i class="material-icons">apartment</i>
+  </h1>
+  <p class="message">Copy json response of https://padoa-group.zendesk.com/api/v2/views/xxxx/execute.json below (execute.json in network)</p>
 </header>
 <main>
   <form class="form" [formGroup]="form">
-    <textArea class="input" formControlName="inputData" ngDefaultControl rows="12" cols="60"></textArea>
-    <textArea class="output" formControlName="outputData" ngDefaultControl rows="12" cols="60" readonly></textArea>
+    <textArea class="input" formControlName="inputData" ngDefaultControl rows="24" cols="60"></textArea>
+    <textArea class="output" formControlName="outputData" ngDefaultControl rows="24" cols="60" readonly></textArea>
   </form>
 </main>
 

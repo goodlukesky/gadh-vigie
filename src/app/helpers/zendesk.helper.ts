@@ -17,23 +17,32 @@ export class ZendeskHelper {
     Aiman: '@Aiman Hmidouch',
     Eliane: '@Eliane Paelinck',
     Fabien: '@Fabien Sacrepeigne',
-    Guillaume: '@Guillaume Miltin',
-    Gustavo: '@Gustavo Chaiza Ramirez',
+    Guillaume: '@Guimilt',
+    Amélie: '@Amélie M',
+    Gustavo: '@Gustavo Ch.R.',
     Jialiang: '@jialiang',
-    Maxence: '@Maxence Morillon',
-    Maxime: '@Maxime Boinet',
     Pierre: '@Pierre Moulonguet',
     Stéphane: '@Stéphane de Chatillon',
     Sébastien: '@Sébastien LEONCE',
     Yassine: '@Yassine',
     Akram: '@Akram SELMI',
-    null: '',
   };
 
   public static generateList(input: IZendeskInput): string {
-    return input.rows.map((row: IZendeskInputRow) =>
-      `[${row.ticket.id}](${ZendeskHelper._baseLink}${row.ticket.id}) -> ${
-        ZendeskHelper._mapName[row[4950844815121]]
-      } -> ${row.ticket.subject}`).join('  \n');
+    const notAssigned = input.rows?.filter((row) => !ZendeskHelper._mapName[row[4950844815121]]) ?? [];
+    const assigned = input.rows?.filter((row) => ZendeskHelper._mapName[row[4950844815121]]) ?? [];
+    return [
+      { rows: notAssigned, label: 'Sans affecter :empty_nest:' },
+      { rows: assigned, label: 'Déjà affectés :homme_technologue:' }
+    ].map((group) => ZendeskHelper._writeGroupLine(group.rows, group.label)).join('');
+  }
+
+  private static _writeGroupLine(group: IZendeskInputRow[], title: string): string {
+    return `${group.length ? `> ${title}\n` : ''}${group.map((row: IZendeskInputRow) => ZendeskHelper._writeLine(row)).join('')}\n`
+  }
+
+  private static _writeLine(row: IZendeskInputRow): string {
+    const owner = ZendeskHelper._mapName[row[4950844815121]] ?? '';
+    return `- ${row.ticket.subject} ${owner}\n  ${ZendeskHelper._baseLink}${row.ticket.id}\n`;
   }
 }

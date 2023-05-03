@@ -1,3 +1,14 @@
+.header {
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 2rem;
+
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
 .form {
   display: flex;
   gap: 2rem;
