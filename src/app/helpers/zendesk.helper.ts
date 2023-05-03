@@ -19,12 +19,14 @@ export class ZendeskHelper {
     Fabien: '@Fabien Sacrepeigne',
     Guillaume: '@Guillaume Miltin',
     Gustavo: '@Gustavo Chaiza Ramirez',
-    Jianlang: '@Jialang',
+    Jialiang: '@jialiang',
     Maxence: '@Maxence Morillon',
     Maxime: '@Maxime Boinet',
     Pierre: '@Pierre Moulonguet',
     Stéphane: '@Stéphane de Chatillon',
+    Sébastien: '@Sébastien LEONCE',
     Yassine: '@Yassine',
+    Akram: '@Akram SELMI',
     null: '',
   };
 
