@@ -25,6 +25,7 @@ export class ZendeskHelper {
     Pierre: '@Pierre Moulonguet',
     Stéphane: '@Stéphane de Chatillon',
     Yassine: '@Yassine',
+    Sébastien: '@Sébastien LEONCE',
     null: '',
   };
 
