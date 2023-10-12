@@ -26,6 +26,7 @@ export class ZendeskHelper {
     Sébastien: '@Sébastien LEONCE',
     Yassine: '@Yassine',
     Akram: '@Akram SELMI',
+    Walid: '@Walid',
   };
 
   public static generateList(input: IZendeskInput): string {
