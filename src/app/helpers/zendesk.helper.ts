@@ -20,13 +20,16 @@ export class ZendeskHelper {
     Guillaume: '@Guimilt',
     Amélie: '@Amélie M',
     Gustavo: '@Gustavo Ch.R.',
-    Jialiang: '@jialiang',
     Pierre: '@Pierre Moulonguet',
-    Stéphane: '@Stéphane de Chatillon',
     Sébastien: '@Sébastien LEONCE',
     Yassine: '@Yassine',
     Akram: '@Akram SELMI',
     Walid: '@Walid',
+    Aurel: '@Aurèle',
+    Hugo: '@Hugo Delfosse',
+    Théo: '@Théo Casner',
+    Marius: '@Marius',
+    Léa: '@Léa Margery',
   };
 
   public static generateList(input: IZendeskInput): string {
